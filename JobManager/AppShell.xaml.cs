@@ -10,6 +10,7 @@ namespace JobManager
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(WelcomePage), typeof(WelcomePage));
+            Routing.RegisterRoute(nameof(JobListPage), typeof(JobListPage));
         }
     }
 }

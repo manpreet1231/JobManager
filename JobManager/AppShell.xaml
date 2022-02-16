@@ -90,6 +90,9 @@
     <FlyoutItem Title="Welcome">
         <ShellContent Route="WelcomePage" ContentTemplate="{DataTemplate views:WelcomePage}"></ShellContent>
     </FlyoutItem>
+    <FlyoutItem Title="Jobs">
+        <ShellContent Route="JobListPage" ContentTemplate="{DataTemplate views:JobListPage}"></ShellContent>
+    </FlyoutItem>
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 

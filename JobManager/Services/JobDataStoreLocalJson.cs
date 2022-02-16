@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace JobManager.Services
 {
-    class JobDataStoreLocalJson : IJobDataStore<Job>
+    class JobDataStorasynceLocalJson : IJobDataStore<Job>
     {
-        public Task AddJob(Job job)
+        public async Task AddJob(Job job)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteJob(Job job)
+        public async Task DeleteJob(Job job)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Job> GetJob(string jobId)
+        public async Task<Job> GetJob(string jobId)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace JobManager.Services
             //throw new NotImplementedException();
         }
 
-        public Task UpdateJob(Job job)
+        public async Task UpdateJob(Job job)
         {
             throw new NotImplementedException();
         }
