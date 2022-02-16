@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:JobManager.Views"
        Title="JobManager"
        x:Class="JobManager.AppShell">
 
@@ -86,7 +87,9 @@
         content you can do so by calling 
         await Shell.Current.GoToAsync("//LoginPage");
     -->
- 
+    <FlyoutItem Title="Welcome">
+        <ShellContent Route="WelcomePage" ContentTemplate="{DataTemplate views:WelcomePage}"></ShellContent>
+    </FlyoutItem>
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 

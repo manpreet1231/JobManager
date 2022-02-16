@@ -1,4 +1,7 @@
 ﻿
+using JobManager.Views;
+using Xamarin.Forms;
+
 namespace JobManager
 {
     public partial class AppShell : Xamarin.Forms.Shell
@@ -6,6 +9,7 @@ namespace JobManager
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(WelcomePage), typeof(WelcomePage));
         }
     }
 }
