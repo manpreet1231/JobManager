@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "yaUzaHIEArie8KQzmIgxrUWCn+AFXS+VkZoOZ/VkrTcQ/PbaqPLf4Hw0dlEjslsmRD5mkoEEzBj/YR7wJUD5gw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager\\JobManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
