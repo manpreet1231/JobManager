@@ -11,8 +11,8 @@ namespace JobManager.ViewModels
     class JobListViewModel: JobManagerBase
     {
         public ObservableRangeCollection<Job> Jobs { get; set; }
-        public AsyncCommand RefreshCammand { get; }
-        public AsyncCommand<Job> SelectedCammand { get; }
+        public AsyncCommand RefreshCommand { get; }
+        public AsyncCommand<Job> SelectedCommand { get; }
 
         private Job selectedJob;
         public Job SelectedJob 
@@ -23,9 +23,12 @@ namespace JobManager.ViewModels
         public JobListViewModel()
         {
             Title = "Jobs";
+            Jobs = new ObservableRangeCollection<Job>();
 
-            RefreshCammand = new AsyncCommand(Refresh);
-            SelectedCammand = new AsyncCommand<Job>(Selected);
+            LoadJobs();
+
+            RefreshCommand = new AsyncCommand(Refresh);
+            SelectedCommand = new AsyncCommand<Job>(Selected);
         }
 
         private async Task Selected(Job job)
@@ -38,6 +41,8 @@ namespace JobManager.ViewModels
             IsBusy = true;
             Jobs.Clear();
             LoadJobs();
+
+            IsBusy = false;
         }
 
         public async void LoadJobs()

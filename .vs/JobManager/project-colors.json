@@ -1,5 +1,11 @@
 {
   "Version": 1,
-  "ProjectMap": {},
-  "NextColorIndex": 0
+  "ProjectMap": {
+    "f0779f13-b12d-46ab-9482-d2cc61dedca2": {
+      "ProjectGuid": "f0779f13-b12d-46ab-9482-d2cc61dedca2",
+      "DisplayName": "JobManager",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
 }
