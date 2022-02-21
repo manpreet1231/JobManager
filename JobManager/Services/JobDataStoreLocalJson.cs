@@ -16,66 +16,23 @@ namespace JobManager.Services
                     return Path.Combine(basePath,"Jobs.json");
             }
     }
-        public async Task AddJob(Job job)
+        private List<Job> ReadFile()
         {
-            var jobs = ReadFile();
-            jobs.Add(job);
-            WriteFile(jobs);
-            // throw new NotImplementedException();
-        }
-
-        public async Task DeleteJob(Job job)
-        {
-            var jobs = ReadFile();
-            var remove = jobs.Find(p => p.Id == job.Id);
-            jobs.Remove(remove);
-            //throw new NotImplementedException();
-        }
-
-        public async Task<Job> GetJob(int jobId)
-        {
-            var jobs = ReadFile();
-            var job = jobs.Find(p => p.Id == jobId);
-            return job;
-            //throw new NotImplementedException();
-        }
-
-        public async Task<IEnumerable<Job>> GetJobs()
-        {
-            var jobs = ReadFile();
-            return jobs;
-           
-            //return GetDefaultJobs();
-            //throw new NotImplementedException();
-        }
-
-        public async Task UpdateJob(Job job)
-        {
-            var jobs = ReadFile();
-            jobs[jobs.FindIndex(p => p.Id == job.Id)] = job;
-            WriteFile(jobs);
-            //throw new NotImplementedException();
-        }
-        private void WriteFile(List<Job> job) {
-            var jsonString = JsonConvert.SerializeObject(job);
-            File.WriteAllText(FilePath, jsonString);
-        }
-
-        private List<Job> ReadFile() {
-            if (File.Exists(FilePath))
+            File.Delete(FilePath);
+            try
             {
                 var jsonString = File.ReadAllText(FilePath);
                 var jobs = JsonConvert.DeserializeObject<List<Job>>(jsonString);
                 return jobs;
             }
-            else {
-                var jobs = GetDefaultJobs();
-                WriteFile(jobs);
-                return jobs;
+            catch(Exception e) {
+                var defaultJobs = GetDefaultJobs();
+                WriteFile(defaultJobs);
+                return defaultJobs;
             }
         }
-
-        private List<Job> GetDefaultJobs() {
+        private List<Job> GetDefaultJobs()
+        {
             var jobs = new List<Job>() {
                 new Job { Id = 1, Name = "Job A Local Json File" , Description = "This is job a."},
                 new Job { Id = 2, Name = "Job B Local Json File" , Description = "This is job b."},
@@ -85,10 +42,42 @@ namespace JobManager.Services
             };
             return jobs;
         }
-
-        public Task<Job> GetJob(string jobId)
+        private void WriteFile(List<Job> jobs)
         {
-            throw new NotImplementedException();
+            var jsonString = JsonConvert.SerializeObject(jobs);
+            File.WriteAllText(FilePath, jsonString);
         }
+        public async Task<Job> GetJob(int jobId)
+        {
+            var jobs = ReadFile();
+            var job = jobs.Find(p => p.Id == jobId);
+            return job;
+        }
+        public async Task<IEnumerable<Job>> GetJobs()
+        {
+            var jobs = ReadFile();
+            return jobs;
+        }
+        public async Task UpdateJob(Job job)
+        {
+            var jobs = ReadFile();
+            jobs[jobs.FindIndex(p => p.Id == job.Id)] = job;
+            WriteFile(jobs);
+        }
+        public async Task AddJob(Job job)
+        {
+            var jobs = ReadFile();
+            jobs.Add(job);
+            WriteFile(jobs);
+        }
+
+        public async Task DeleteJob(Job job)
+        {
+            var jobs = ReadFile();
+            var remove = jobs.Find(p => p.Id == job.Id);
+            jobs.Remove(remove);
+        }
+
+       
     }
 }
