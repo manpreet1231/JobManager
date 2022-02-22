@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobManager.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,8 @@ namespace JobManager.Views
         {
             InitializeComponent();
         }
-        private async void OnAccessApiClicked(Object sender, EventArgs e) { 
+        private async void OnAccessApiClicked(Object sender, EventArgs e) {
+            var service = DependencyService.Get<IWebClientService>();
         }
     }
 }
