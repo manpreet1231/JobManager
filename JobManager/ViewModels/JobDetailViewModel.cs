@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace JobManager.ViewModels
 {
@@ -13,7 +14,7 @@ namespace JobManager.ViewModels
             get { return jobId; }
             set { 
                 jobId = value;
-                LoadJob(value);
+                //LoadJob(value);
             }
         }
 

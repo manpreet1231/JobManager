@@ -5,6 +5,8 @@ public class MonoPackageManager_Resources {
 		"JobManager.Android.dll",
 		"FormsViewGroup.dll",
 		"JobManager.dll",
+		"Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll",
+		"Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll",
 		"MvvmHelpers.dll",
 		"Newtonsoft.Json.dll",
 		"Xamarin.AndroidX.Activity.dll",

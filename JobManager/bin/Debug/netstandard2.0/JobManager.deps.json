@@ -9,9 +9,11 @@
     ".NETStandard,Version=v2.0/": {
       "JobManager/1.0.0": {
         "dependencies": {
+          "Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs": "5.0.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
           "Refractored.MvvmHelpers": "1.6.2",
+          "Wintellect.Azure.Storage": "1.6.0.1",
           "Xamarin.CommunityToolkit": "2.0.0",
           "Xamarin.CommunityToolkit.Markup": "2.0.0",
           "Xamarin.Essentials": "1.7.1",
@@ -19,6 +21,25 @@
         },
         "runtime": {
           "JobManager.dll": {}
+        }
+      },
+      "Microsoft.Azure.Functions.Worker.Extensions.Abstractions/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs/5.0.0": {
+        "dependencies": {
+          "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -93,6 +114,14 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
+      "Wintellect.Azure.Storage/1.6.0.1": {
+        "runtime": {
+          "lib/net45/Wintellect.Azure.Storage.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.0": {
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0",
@@ -151,6 +180,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Abstractions/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kAs9BTuzdOvyuN2m5CYyQzyvzXKJ6hhIOgcwm0W8Q+Fwj91a1eBmRSi9pVzpM4V3skNt/+pkPD3wxFD4nEw0bg==",
+      "path": "microsoft.azure.functions.worker.extensions.abstractions/1.1.0",
+      "hashPath": "microsoft.azure.functions.worker.extensions.abstractions.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Cr+ziBQA/Lyt5rMURHBje+foGook+B82gnAfEE32bHcXGlpKJnnVdLqHy0OqHliUksFddkRYS2gY8dYx+NH/mA==",
+      "path": "microsoft.azure.functions.worker.extensions.storage.blobs/5.0.0",
+      "hashPath": "microsoft.azure.functions.worker.extensions.storage.blobs.5.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -221,6 +264,13 @@
       "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "Wintellect.Azure.Storage/1.6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ivNKrVNuF6L5lNk2XwWpfvGqCk2JxpU1T9h8857ac1NezBA/IcD4fczmAUtUaU6UCYXW6ahiAOABrWnbDArbKg==",
+      "path": "wintellect.azure.storage/1.6.0.1",
+      "hashPath": "wintellect.azure.storage.1.6.0.1.nupkg.sha512"
     },
     "Xamarin.CommunityToolkit/2.0.0": {
       "type": "package",

@@ -8,7 +8,7 @@ namespace JobManager.Services
 {
     class JobDataStoreBlobStorageJson : IJobDataStore<Job>
     {
-        private readonly BlobServiceClient service = new BlobServiceClient(ConnectionString);
+        //private readonly BlobServiceClient service = new BlobServiceClient(ConnectionString);
         private static string ConnectionString = "DefaultEndpointsProtocol=[http|https];AccountName=myAccountName;AccountKey=myAccountKey";
         public Task AddJob(Job job)
         {

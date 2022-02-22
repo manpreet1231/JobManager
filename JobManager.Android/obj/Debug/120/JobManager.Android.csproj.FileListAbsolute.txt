@@ -1289,3 +1289,5 @@ C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\a
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\crc64515ee83f00766c60\VisualFeedbackEffectRouter_FastRendererOnLayoutChangeListener.java
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\crc645b8ccbad6ecd7dce\SideMenuViewRenderer.java
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\crc64a0e0a82d0db9a07d\Connectivity_EssentialsNetworkCallback.java
+C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\assets\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\assets\Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll

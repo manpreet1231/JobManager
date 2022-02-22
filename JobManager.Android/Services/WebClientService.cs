@@ -11,7 +11,10 @@ using JobManager.Services;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Xamarin.Forms;
+using JobManager.Droid.Services;
 
+[assembly: Dependency(typeof(WebClientService))]
 namespace JobManager.Droid.Services
 {
     public class WebClientService : IWebClientService
