@@ -10,6 +10,7 @@ using System.Linq;
 using JobManager.Services;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace JobManager.Droid.Services
 {
@@ -17,7 +18,16 @@ namespace JobManager.Droid.Services
     {
         public async Task<string> GetString(string uri)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var client = new HttpClient();
+                var response = await client.GetAsync(uri);
+                return response.IsSuccessStatusCode ? await response.Content.ReadAsStringAsync() : null;
+
+            }
+            catch {
+                return null;
+            }
         }
     }
 }

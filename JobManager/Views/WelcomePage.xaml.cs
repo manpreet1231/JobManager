@@ -16,5 +16,7 @@ namespace JobManager.Views
         {
             InitializeComponent();
         }
+        private async void OnAccessApiClicked(Object sender, EventArgs e) { 
+        }
     }
 }
