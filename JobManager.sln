@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.Android", "JobMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobManager", "JobManager\JobManager.csproj", "{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.API", "..\JobManager - Copy\JobManager.API\JobManager.API.csproj", "{E62A943A-4275-4E52-9F0B-171F631AD1CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.API", "JobManager.API\JobManager.API.csproj", "{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,10 @@ Global
 		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{E62A943A-4275-4E52-9F0B-171F631AD1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E62A943A-4275-4E52-9F0B-171F631AD1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E62A943A-4275-4E52-9F0B-171F631AD1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E62A943A-4275-4E52-9F0B-171F631AD1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

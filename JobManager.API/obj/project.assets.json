@@ -2,37 +2,70 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
+      "Microsoft.Azure.Functions.Worker.Extensions.Abstractions/1.1.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
-        },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll": {}
+        }
       },
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect/5.0.0": {
+      "Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
+          "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.1.0"
         },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll": {}
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll": {}
+        }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "OpenTK/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {}
+        }
+      },
+      "OpenTK.GLControl/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.0.1"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -41,206 +74,215 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
-        "build": {
-          "build/Microsoft.Extensions.ApiDescription.Server.props": {},
-          "build/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
         },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
-          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/6.7.1": {
+      "Xamarin.CommunityToolkit/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "6.7.1"
+          "Xamarin.Forms": "5.0.0.2291",
+          "Xamarin.Forms.Platform.WPF": "5.0.0.2291"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {}
+          "lib/netcoreapp3.1/Xamarin.CommunityToolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {}
-        }
-      },
-      "Microsoft.IdentityModel.Logging/6.7.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {}
+          "lib/netcoreapp3.1/Xamarin.CommunityToolkit.dll": {}
         },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {}
-        }
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
       },
-      "Microsoft.IdentityModel.Protocols/6.7.1": {
+      "Xamarin.CommunityToolkit.Markup/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "6.7.1",
-          "Microsoft.IdentityModel.Tokens": "6.7.1"
+          "Xamarin.Forms": "5.0.0.2291"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.dll": {}
         }
       },
-      "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.7.1": {
+      "Xamarin.Essentials/1.7.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Protocols": "6.7.1",
-          "System.IdentityModel.Tokens.Jwt": "6.7.1"
+          "System.Numerics.Vectors": "4.5.0"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Microsoft.IdentityModel.Tokens/6.7.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "Microsoft.IdentityModel.Logging": "6.7.1",
-          "System.Security.Cryptography.Cng": "4.5.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
-        }
-      },
-      "Microsoft.OpenApi/1.2.3": {
+      "Xamarin.Forms/5.0.0.2337": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore/5.6.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
-          "Swashbuckle.AspNetCore.Swagger": "5.6.3",
-          "Swashbuckle.AspNetCore.SwaggerGen": "5.6.3",
-          "Swashbuckle.AspNetCore.SwaggerUI": "5.6.3"
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
         },
         "build": {
-          "build/Swashbuckle.AspNetCore.props": {}
+          "buildTransitive/Xamarin.Forms.props": {},
+          "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/5.6.3": {
+      "Xamarin.Forms.Platform.WPF/5.0.0.2291": {
         "type": "package",
         "dependencies": {
-          "Microsoft.OpenApi": "1.2.3"
+          "OpenTK": "3.0.1",
+          "OpenTK.GLControl": "3.0.1",
+          "Xamarin.Forms": "5.0.0.2291"
         },
         "compile": {
-          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+          "lib/netcoreapp3.1/Xamarin.Forms.Platform.WPF.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/5.6.3": {
-        "type": "package",
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "5.6.3"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/5.6.3": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "System.IdentityModel.Tokens.Jwt/6.7.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "6.7.1",
-          "Microsoft.IdentityModel.Tokens": "6.7.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
+          "lib/netcoreapp3.1/Xamarin.Forms.Platform.WPF.dll": {}
         }
       },
-      "System.Security.Cryptography.Cng/4.5.0": {
-        "type": "package",
+      "JobManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs": "5.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
+          "Xamarin.CommunityToolkit": "2.0.0",
+          "Xamarin.CommunityToolkit.Markup": "2.0.0",
+          "Xamarin.Essentials": "1.7.1",
+          "Xamarin.Forms": "5.0.0.2337"
+        },
         "compile": {
-          "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
+          "bin/placeholder/JobManager.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
+          "bin/placeholder/JobManager.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
-      "sha512": "26WlfJsOB4QP3VsEVu5GGDSGm5wu6ikQqRUOaZ3BUmyGcMWsD28xFxPxFw4OszYgKpj54QYlyec19KcrEGkqDw==",
+    "Microsoft.Azure.Functions.Worker.Extensions.Abstractions/1.1.0": {
+      "sha512": "kAs9BTuzdOvyuN2m5CYyQzyvzXKJ6hhIOgcwm0W8Q+Fwj91a1eBmRSi9pVzpM4V3skNt/+pkPD3wxFD4nEw0bg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.0",
+      "path": "microsoft.azure.functions.worker.extensions.abstractions/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll",
+        "microsoft.azure.functions.worker.extensions.abstractions.1.1.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs/5.0.0": {
+      "sha512": "Cr+ziBQA/Lyt5rMURHBje+foGook+B82gnAfEE32bHcXGlpKJnnVdLqHy0OqHliUksFddkRYS2gY8dYx+NH/mA==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.extensions.storage.blobs/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll",
+        "microsoft.azure.functions.worker.extensions.storage.blobs.5.0.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.storage.blobs.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "OpenTK/3.0.1": {
+      "sha512": "X/jjhmvXvzzX+T4gTstdmeqMCcD51P+HD/cy1AZinFn1Rcu5KOrgQVZiD4Gm4pj2PjZ91dY8NEs2i9qjIDgJJA==",
+      "type": "package",
+      "path": "opentk/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/OpenTK.dll.config",
+        "lib/net20/OpenTK.dll",
+        "lib/net20/OpenTK.pdb",
+        "lib/net20/OpenTK.xml",
+        "opentk.3.0.1.nupkg.sha512",
+        "opentk.nuspec"
+      ]
+    },
+    "OpenTK.GLControl/3.0.1": {
+      "sha512": "bDbxxCWkOvTJGaRlaKscZcP1cu1jDKbn+a6wMAsMzmGtrYZZbrVoc+SaMjSEOgavLEJQ8SHqLeXfZ0tlM1Jn4g==",
+      "type": "package",
+      "path": "opentk.glcontrol/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/OpenTK.GLControl.dll",
+        "lib/net20/OpenTK.GLControl.pdb",
+        "lib/net20/OpenTK.GLControl.xml",
+        "opentk.glcontrol.3.0.1.nupkg.sha512",
+        "opentk.glcontrol.nuspec"
+      ]
+    },
+    "Refractored.MvvmHelpers/1.6.2": {
+      "sha512": "pXiyT0ad3QI7IzZSSjVNliyhyyAe7lmNPdfAEgSrtjhF9twrYoKbBlTd58IJc67Fw8QmHEur8F9eBA4rj+BZAg==",
+      "type": "package",
+      "path": "refractored.mvvmhelpers/1.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
-        "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+        "lib/net461/MvvmHelpers.dll",
+        "lib/net461/MvvmHelpers.pdb",
+        "lib/net461/MvvmHelpers.xml",
+        "lib/netstandard1.0/MvvmHelpers.dll",
+        "lib/netstandard1.0/MvvmHelpers.pdb",
+        "lib/netstandard1.0/MvvmHelpers.xml",
+        "lib/netstandard2.0/MvvmHelpers.dll",
+        "lib/netstandard2.0/MvvmHelpers.pdb",
+        "lib/netstandard2.0/MvvmHelpers.xml",
+        "refractored.mvvmhelpers.1.6.2.nupkg.sha512",
+        "refractored.mvvmhelpers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.OpenIdConnect/5.0.0": {
-      "sha512": "YzUMJYSVWEEQmHpOhEzOcZ2/ltQ/uP1s8DHK8oaobgsjKUdIeRvEwtVQ5D6zO0vdlj4j9Mw0JD1FrZPGI07fHw==",
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.openidconnect/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll",
-        "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.xml",
-        "microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.authentication.openidconnect.nuspec"
-      ]
-    },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "system.numerics.vectors/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -248,276 +290,46 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
         "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.3/Microsoft.CSharp.dll",
-        "lib/netstandard2.0/Microsoft.CSharp.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
         "lib/uap10.0.16299/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
-        "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/Microsoft.CSharp.dll",
-        "ref/netcore50/Microsoft.CSharp.xml",
-        "ref/netcore50/de/Microsoft.CSharp.xml",
-        "ref/netcore50/es/Microsoft.CSharp.xml",
-        "ref/netcore50/fr/Microsoft.CSharp.xml",
-        "ref/netcore50/it/Microsoft.CSharp.xml",
-        "ref/netcore50/ja/Microsoft.CSharp.xml",
-        "ref/netcore50/ko/Microsoft.CSharp.xml",
-        "ref/netcore50/ru/Microsoft.CSharp.xml",
-        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
-        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
         "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.0/Microsoft.CSharp.dll",
-        "ref/netstandard1.0/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
-        "ref/netstandard2.0/Microsoft.CSharp.dll",
-        "ref/netstandard2.0/Microsoft.CSharp.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
         "ref/uap10.0.16299/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
-      "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
-      "path": "microsoft.extensions.apidescription.server/3.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Microsoft.Extensions.ApiDescription.Server.props",
-        "build/Microsoft.Extensions.ApiDescription.Server.targets",
-        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
-        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
-        "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-        "microsoft.extensions.apidescription.server.nuspec",
-        "tools/Newtonsoft.Json.dll",
-        "tools/dotnet-getdocument.deps.json",
-        "tools/dotnet-getdocument.dll",
-        "tools/dotnet-getdocument.runtimeconfig.json",
-        "tools/net461-x86/GetDocument.Insider.exe",
-        "tools/net461-x86/GetDocument.Insider.exe.config",
-        "tools/net461/GetDocument.Insider.exe",
-        "tools/net461/GetDocument.Insider.exe.config",
-        "tools/netcoreapp2.1/GetDocument.Insider.deps.json",
-        "tools/netcoreapp2.1/GetDocument.Insider.dll",
-        "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json"
-      ]
-    },
-    "Microsoft.IdentityModel.JsonWebTokens/6.7.1": {
-      "sha512": "q/Ii8ILV8cM1X49gnl12cJK+0KWiI1xUeiLYiE9+uRonJLaHWB0l8t89rGnZTEGthGKItyikKSB38LQpfy/zBw==",
-      "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/6.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
-        "microsoft.identitymodel.jsonwebtokens.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Logging/6.7.1": {
-      "sha512": "WGtTiTy2ZikOz/I5GxCGbNPLOpyI9fPyuyG4Q5rfkhACK+Q0Ad6U8XajYZ2cJ2cFKse0IvHwm15HVrfwrX/89g==",
-      "type": "package",
-      "path": "microsoft.identitymodel.logging/6.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.IdentityModel.Logging.dll",
-        "lib/net45/Microsoft.IdentityModel.Logging.xml",
-        "lib/net461/Microsoft.IdentityModel.Logging.dll",
-        "lib/net461/Microsoft.IdentityModel.Logging.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
-        "microsoft.identitymodel.logging.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Protocols/6.7.1": {
-      "sha512": "DVGYIRUK3TkCTmz0IgBzWUE55CDNfLtXil1FgSbgHI7hi2fP2pz4tiTAno/5O/hdVwAzV+HtCQtFi7xW8smaHw==",
-      "type": "package",
-      "path": "microsoft.identitymodel.protocols/6.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.IdentityModel.Protocols.dll",
-        "lib/net45/Microsoft.IdentityModel.Protocols.xml",
-        "lib/net461/Microsoft.IdentityModel.Protocols.dll",
-        "lib/net461/Microsoft.IdentityModel.Protocols.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.xml",
-        "microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
-        "microsoft.identitymodel.protocols.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.7.1": {
-      "sha512": "99gA+E6ZOCqySrT80Yh6wrfjJfeMxDisdAcA5Q66zHxMPY5Gzc8aT2Ldzu0GP1sADv/o3yI1Gc3P1GHXlXAVVQ==",
-      "type": "package",
-      "path": "microsoft.identitymodel.protocols.openidconnect/6.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "lib/net45/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
-        "lib/net461/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "lib/net461/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
-        "microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
-        "microsoft.identitymodel.protocols.openidconnect.nuspec"
-      ]
-    },
-    "Microsoft.IdentityModel.Tokens/6.7.1": {
-      "sha512": "Td9Vn9d/0eM1zlUUvaVQzjqdBkBLJ2oGtGL/LYPuiCUAALMeAHVDtpXGk8eYI8Gbduz5n+o7ifldsCIca4MWew==",
-      "type": "package",
-      "path": "microsoft.identitymodel.tokens/6.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.IdentityModel.Tokens.dll",
-        "lib/net45/Microsoft.IdentityModel.Tokens.xml",
-        "lib/net461/Microsoft.IdentityModel.Tokens.dll",
-        "lib/net461/Microsoft.IdentityModel.Tokens.xml",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
-        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
-        "microsoft.identitymodel.tokens.nuspec"
-      ]
-    },
-    "Microsoft.OpenApi/1.2.3": {
-      "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
-      "type": "package",
-      "path": "microsoft.openapi/1.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net46/Microsoft.OpenApi.dll",
-        "lib/net46/Microsoft.OpenApi.pdb",
-        "lib/net46/Microsoft.OpenApi.xml",
-        "lib/netstandard2.0/Microsoft.OpenApi.dll",
-        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
-        "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.2.3.nupkg.sha512",
-        "microsoft.openapi.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore/5.6.3": {
-      "sha512": "UkL9GU0mfaA+7RwYjEaBFvAzL8qNQhNqAeV5uaWUu/Z+fVgvK9FHkGCpTXBqSQeIHuZaIElzxnLDdIqGzuCnVg==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore/5.6.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Swashbuckle.AspNetCore.props",
-        "swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Swagger/5.6.3": {
-      "sha512": "rn/MmLscjg6WSnTZabojx5DQYle2GjPanSPbCU3Kw8Hy72KyQR3uy8R1Aew5vpNALjfUFm2M/vwUtqdOlzw+GA==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/5.6.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.swagger.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/5.6.3": {
-      "sha512": "CkhVeod/iLd3ikVTDOwG5sym8BE5xbqGJ15iF3cC7ZPg2kEwDQL4a88xjkzsvC9oOB2ax6B0rK0EgRK+eOBX+w==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/5.6.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggergen.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/5.6.3": {
-      "sha512": "BPvcPxQRMsYZ3HnYmGKRWDwX4Wo29WHh14Q6B10BB8Yfbbcza+agOC2UrBFA1EuaZuOsFLbp6E2+mqVNF/Je8A==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/5.6.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggerui.nuspec"
-      ]
-    },
-    "System.IdentityModel.Tokens.Jwt/6.7.1": {
-      "sha512": "sPnRn9dUMYARQC3mAKWpig/7rlrruqJvopKXmGoYAQ1A+xQsT3q5LiwsArkV8Oz/hfiRCLkV9vgi3FQg/mYfrw==",
-      "type": "package",
-      "path": "system.identitymodel.tokens.jwt/6.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/System.IdentityModel.Tokens.Jwt.dll",
-        "lib/net45/System.IdentityModel.Tokens.Jwt.xml",
-        "lib/net461/System.IdentityModel.Tokens.Jwt.dll",
-        "lib/net461/System.IdentityModel.Tokens.Jwt.xml",
-        "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
-        "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
-        "system.identitymodel.tokens.jwt.nuspec"
-      ]
-    },
-    "System.Security.Cryptography.Cng/4.5.0": {
-      "sha512": "WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
-      "type": "package",
-      "path": "system.security.cryptography.cng/4.5.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -525,15 +337,16 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.Cng.dll",
-        "lib/net461/System.Security.Cryptography.Cng.dll",
-        "lib/net462/System.Security.Cryptography.Cng.dll",
-        "lib/net47/System.Security.Cryptography.Cng.dll",
-        "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.3/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Cng.dll",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
         "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
@@ -541,48 +354,363 @@
         "lib/xamarinwatchos10/_._",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.Cng.dll",
-        "ref/net461/System.Security.Cryptography.Cng.dll",
-        "ref/net461/System.Security.Cryptography.Cng.xml",
-        "ref/net462/System.Security.Cryptography.Cng.dll",
-        "ref/net462/System.Security.Cryptography.Cng.xml",
-        "ref/net47/System.Security.Cryptography.Cng.dll",
-        "ref/net47/System.Security.Cryptography.Cng.xml",
-        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
-        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.xml",
-        "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "ref/netcoreapp2.1/System.Security.Cryptography.Cng.xml",
-        "ref/netstandard1.3/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Cng.xml",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
         "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net46/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net462/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net47/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.cryptography.cng.4.5.0.nupkg.sha512",
-        "system.security.cryptography.cng.nuspec",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Xamarin.CommunityToolkit/2.0.0": {
+      "sha512": "hY5MqkmipQ7Q6FikK3E4YnBj9llqvQv10sT8LhYcf2oMwnalWvCHuoPujjmCP/YmxPNbQm4JwWYp7CBuvzHMVw==",
+      "type": "package",
+      "path": "xamarin.communitytoolkit/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/xct/cs/Xamarin.CommunityToolkit.SourceGenerator.dll",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.dll",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.xml",
+        "lib/net471/Xamarin.CommunityToolkit.dll",
+        "lib/net471/Xamarin.CommunityToolkit.xml",
+        "lib/net472/Xamarin.CommunityToolkit.dll",
+        "lib/net472/Xamarin.CommunityToolkit.xml",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.dll",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.xml",
+        "lib/tizen40/Xamarin.CommunityToolkit.dll",
+        "lib/tizen40/Xamarin.CommunityToolkit.xml",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.dll",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.pri",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.xml",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.xml",
+        "xamarin.communitytoolkit.2.0.0.nupkg.sha512",
+        "xamarin.communitytoolkit.nuspec"
+      ]
+    },
+    "Xamarin.CommunityToolkit.Markup/2.0.0": {
+      "sha512": "H9Cl5u7/5wm3IwZKPzfKvXA17quusdnE6sqv4qzFLj790rL98qCdt80Psq9H8+iEJ0miONluHi49kCYp7R9FoQ==",
+      "type": "package",
+      "path": "xamarin.communitytoolkit.markup/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.Markup.dll",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.Markup.xml",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.dll",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.xml",
+        "xamarin.communitytoolkit.markup.2.0.0.nupkg.sha512",
+        "xamarin.communitytoolkit.markup.nuspec"
+      ]
+    },
+    "Xamarin.Essentials/1.7.1": {
+      "sha512": "u7pUgvHJKTYo5ATiwRZvYviq2O0AQXIqxdna+sMxqidfWpbD7FBgFOLNAZzWKSll/AQBPeDrqLAWZNLq+ztpmQ==",
+      "type": "package",
+      "path": "xamarin.essentials/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.Essentials.dll",
+        "lib/monoandroid10.0/Xamarin.Essentials.pdb",
+        "lib/monoandroid10.0/Xamarin.Essentials.xml",
+        "lib/netstandard1.0/Xamarin.Essentials.dll",
+        "lib/netstandard1.0/Xamarin.Essentials.pdb",
+        "lib/netstandard1.0/Xamarin.Essentials.xml",
+        "lib/netstandard2.0/Xamarin.Essentials.dll",
+        "lib/netstandard2.0/Xamarin.Essentials.pdb",
+        "lib/netstandard2.0/Xamarin.Essentials.xml",
+        "lib/tizen40/Xamarin.Essentials.dll",
+        "lib/tizen40/Xamarin.Essentials.pdb",
+        "lib/tizen40/Xamarin.Essentials.xml",
+        "lib/uap10.0.16299/Xamarin.Essentials.dll",
+        "lib/uap10.0.16299/Xamarin.Essentials.pdb",
+        "lib/uap10.0.16299/Xamarin.Essentials.pri",
+        "lib/uap10.0.16299/Xamarin.Essentials.xml",
+        "lib/xamarinios10/Xamarin.Essentials.dll",
+        "lib/xamarinios10/Xamarin.Essentials.pdb",
+        "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarinmac20/Xamarin.Essentials.dll",
+        "lib/xamarinmac20/Xamarin.Essentials.pdb",
+        "lib/xamarinmac20/Xamarin.Essentials.xml",
+        "lib/xamarintvos10/Xamarin.Essentials.dll",
+        "lib/xamarintvos10/Xamarin.Essentials.pdb",
+        "lib/xamarintvos10/Xamarin.Essentials.xml",
+        "lib/xamarinwatchos10/Xamarin.Essentials.dll",
+        "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
+        "lib/xamarinwatchos10/Xamarin.Essentials.xml",
+        "readme.txt",
+        "xamarin.essentials.1.7.1.nupkg.sha512",
+        "xamarin.essentials.nuspec"
+      ]
+    },
+    "Xamarin.Forms/5.0.0.2337": {
+      "sha512": "2AYl2V1YHjEDEmA5d+aP382ielCKr8d/jo3zCgPSvLE/4Pw/em7pHBGmN3yZ/WzxIMV16f7wBfoFCHesMud0AA==",
+      "type": "package",
+      "path": "xamarin.forms/5.0.0.2337",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "build/MonoAndroid10/proguard.cfg",
+        "build/Xamarin.Forms.DefaultItems.props",
+        "build/Xamarin.Forms.DefaultItems.targets",
+        "build/Xamarin.Forms.props",
+        "build/Xamarin.Forms.targets",
+        "build/net46/Mono.Cecil.Mdb.dll",
+        "build/net46/Mono.Cecil.Pdb.dll",
+        "build/net46/Mono.Cecil.Rocks.dll",
+        "build/net46/Mono.Cecil.dll",
+        "build/net46/System.ValueTuple.dll",
+        "build/net46/Xamarin.Forms.Build.Tasks.dll",
+        "build/net46/Xamarin.Forms.Core.dll",
+        "build/net46/Xamarin.Forms.Xaml.dll",
+        "build/netstandard2.0/Mono.Cecil.Mdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Pdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Rocks.dll",
+        "build/netstandard2.0/Mono.Cecil.dll",
+        "build/netstandard2.0/System.CodeDom.dll",
+        "build/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
+        "build/netstandard2.0/Xamarin.Forms.Core.dll",
+        "build/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "buildTransitive/MonoAndroid10/proguard.cfg",
+        "buildTransitive/Xamarin.Forms.DefaultItems.props",
+        "buildTransitive/Xamarin.Forms.DefaultItems.targets",
+        "buildTransitive/Xamarin.Forms.props",
+        "buildTransitive/Xamarin.Forms.targets",
+        "buildTransitive/net46/Mono.Cecil.Mdb.dll",
+        "buildTransitive/net46/Mono.Cecil.Pdb.dll",
+        "buildTransitive/net46/Mono.Cecil.Rocks.dll",
+        "buildTransitive/net46/Mono.Cecil.dll",
+        "buildTransitive/net46/System.ValueTuple.dll",
+        "buildTransitive/net46/Xamarin.Forms.Build.Tasks.dll",
+        "buildTransitive/net46/Xamarin.Forms.Core.dll",
+        "buildTransitive/net46/Xamarin.Forms.Xaml.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.Mdb.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.Pdb.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.Rocks.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.dll",
+        "buildTransitive/netstandard2.0/System.CodeDom.dll",
+        "buildTransitive/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
+        "buildTransitive/netstandard2.0/Xamarin.Forms.Core.dll",
+        "buildTransitive/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "lib/MonoAndroid10.0/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/MonoAndroid10.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/MonoAndroid10.0/FormsViewGroup.dll",
+        "lib/MonoAndroid10.0/FormsViewGroup.pdb",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Core.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Core.pdb",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Platform.Android.pdb",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Platform.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.pdb",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.Mac/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/Xamarin.Mac/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Core.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Platform.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Platform.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Xaml.dll",
+        "lib/Xamarin.iOS10/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/Xamarin.iOS10/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/netstandard1.0/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/netstandard1.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Core.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Core.pdb",
+        "lib/netstandard1.0/Xamarin.Forms.Core.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Platform.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Xaml.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Xaml.pdb",
+        "lib/netstandard1.0/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/netstandard2.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Core.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Core.pdb",
+        "lib/netstandard2.0/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Platform.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.pdb",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.xml",
+        "lib/tizen40/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/tizen40/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/tizen40/Xamarin.Forms.Core.dll",
+        "lib/tizen40/Xamarin.Forms.Core.pdb",
+        "lib/tizen40/Xamarin.Forms.Core.xml",
+        "lib/tizen40/Xamarin.Forms.Platform.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Platform.Tizen.pdb",
+        "lib/tizen40/Xamarin.Forms.Platform.dll",
+        "lib/tizen40/Xamarin.Forms.Xaml.dll",
+        "lib/tizen40/Xamarin.Forms.Xaml.pdb",
+        "lib/tizen40/Xamarin.Forms.Xaml.xml",
+        "lib/uap10.0.14393/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/uap10.0.14393/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/uap10.0.14393/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Core.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Core.pdb",
+        "lib/uap10.0.14393/Xamarin.Forms.Core.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP.pdb",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP.pri",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/CollectionView/ItemsViewStyles.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FlyoutPageControlStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsAutoSuggestBoxStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsCheckBoxStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsFlyout.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/Themes/generic.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PageControlStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Resources.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Shell/ShellPageWrapper.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Xaml.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Xaml.pdb",
+        "lib/uap10.0.14393/Xamarin.Forms.Xaml.xml",
+        "lib/uap10.0.16299/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/uap10.0.16299/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/uap10.0.16299/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
+        "lib/uap10.0.16299/Xamarin.Forms.Core.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Core.pdb",
+        "lib/uap10.0.16299/Xamarin.Forms.Core.xml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP.pdb",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP.pri",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/CollectionView/ItemsViewStyles.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FlyoutPageControlStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsAutoSuggestBoxStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsCheckBoxStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsFlyout.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/Themes/generic.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PageControlStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Resources.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellPageWrapper.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
+        "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
+        "xamarin.forms.5.0.0.2337.nupkg.sha512",
+        "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Forms.Platform.WPF/5.0.0.2291": {
+      "sha512": "5X1XYJtjwkerQAUss0vPIG4hbraXfQTUH7S6ODUTtDV0VjAR0MGHD/9UCbkdhCitWKGRY7WD+IZywWugO0X91Q==",
+      "type": "package",
+      "path": "xamarin.forms.platform.wpf/5.0.0.2291",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "lib/net461/Xamarin.Forms.Platform.WPF.dll",
+        "lib/net461/Xamarin.Forms.Platform.WPF.pdb",
+        "lib/netcoreapp3.1/Xamarin.Forms.Platform.WPF.dll",
+        "lib/netcoreapp3.1/Xamarin.Forms.Platform.WPF.pdb",
+        "xamarin.forms.platform.wpf.5.0.0.2291.nupkg.sha512",
+        "xamarin.forms.platform.wpf.nuspec"
+      ]
+    },
+    "JobManager/1.0.0": {
+      "type": "project",
+      "path": "../JobManager/JobManager.csproj",
+      "msbuildProject": "../JobManager/JobManager.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.0",
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.0",
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "JobManager >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -591,11 +719,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager - Copy\\JobManager.API\\JobManager.API.csproj",
+      "projectUniqueName": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager.API\\JobManager.API.csproj",
       "projectName": "JobManager.API",
-      "projectPath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager - Copy\\JobManager.API\\JobManager.API.csproj",
+      "projectPath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager.API\\JobManager.API.csproj",
       "packagesPath": "C:\\Users\\AzharIIS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager - Copy\\JobManager.API\\obj\\",
+      "outputPath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AzharIIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -611,7 +739,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager\\JobManager.csproj": {
+              "projectPath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager\\JobManager.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -623,26 +755,6 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "[5.0.0, )",
-            "noWarn": [
-              "NU1605"
-            ]
-          },
-          "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
-            "target": "Package",
-            "version": "[5.0.0, )",
-            "noWarn": [
-              "NU1605"
-            ]
-          },
-          "Swashbuckle.AspNetCore": {
-            "target": "Package",
-            "version": "[5.6.3, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -653,22 +765,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          }
-        ],
-        "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'OpenTK 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "OpenTK",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'OpenTK.GLControl 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "OpenTK.GLControl",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

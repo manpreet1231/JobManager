@@ -1,83 +1,55 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using JobManager.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace JobManager.API.Controllers
 {
-    public class JobsController : Controller
+
+
+    [Route("[controller]")]
+    [ApiController]
+    public class JobsController : ControllerBase
     {
-        // GET: JobsController
-        public ActionResult Index()
+        [HttpGet]
+        public IEnumerable<Job> Get()
         {
-            return View();
+            return GetDefaultJobs();
         }
-
-        // GET: JobsController/Details/5
-        public ActionResult Details(int id)
+        private List<Job> GetDefaultJobs()
         {
-            return View();
-        }
 
-        // GET: JobsController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+            var jobs = new List<Job>() {
+                new Job { Id = 1, Name = "Job A API" , Description = "This is api a."},
+                new Job { Id = 2, Name = "Job B API" , Description = "This is api b."},
+                new Job { Id = 3, Name = "Job C API" , Description = "This is api c."},
+                new Job { Id = 4, Name = "Job D API" , Description = "This is api d."}
 
-        // POST: JobsController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: JobsController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: JobsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: JobsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: JobsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            };
+            return jobs;
         }
     }
+
+    /*[ApiController]
+    [Route("[controller]")]
+    public class JobsController : ControllerBase
+    {
+        [HttpGet]
+        public IEnumerable<Job> Get()
+        {
+            return GetDefaultJobs();
+        }
+        private List<Job> GetDefaultJobs() {
+
+            var jobs = new List<Job>() {
+                new Job { Id = 1, Name = "Job A API" , Description = "This is api a."},
+                new Job { Id = 2, Name = "Job B API" , Description = "This is api b."},
+                new Job { Id = 3, Name = "Job C API" , Description = "This is api c."},
+                new Job { Id = 4, Name = "Job D API" , Description = "This is api d."}
+
+            };
+            return jobs;
+        }
+
+    }*/
 }

@@ -5,7 +5,27 @@
       "ProjectGuid": "f0779f13-b12d-46ab-9482-d2cc61dedca2",
       "DisplayName": "JobManager",
       "ColorIndex": 0
+    },
+    "73ca3860-df27-4b04-954c-283924c8e9c1": {
+      "ProjectGuid": "73ca3860-df27-4b04-954c-283924c8e9c1",
+      "DisplayName": "JobManager.Android",
+      "ColorIndex": 1
+    },
+    "e62a943a-4275-4e52-9f0b-171f631ad1cf": {
+      "ProjectGuid": "e62a943a-4275-4e52-9f0b-171f631ad1cf",
+      "DisplayName": "JobManager.API",
+      "ColorIndex": 2
+    },
+    "beb59fa0-5d1f-42d1-bd7b-3717be5ecf5c": {
+      "ProjectGuid": "beb59fa0-5d1f-42d1-bd7b-3717be5ecf5c",
+      "DisplayName": "JobManager.API",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 4
 }
