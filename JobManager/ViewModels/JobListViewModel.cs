@@ -50,16 +50,16 @@ namespace JobManager.ViewModels
 
         public async void LoadJobs()
         {
-            IEnumerable<Job> jobs = await JobDataStore.GetJobs();
-            Jobs.AddRange(jobs);
+            //IEnumerable<Job> jobs = await JobDataStore.GetJobs();
+            //Jobs.AddRange(jobs);
 
-            /*var jobs = new List<Job>() {
-                new Job { Id = 1, Name = "Job A Local Json File" , Description = "This is job a."},
-                new Job { Id = 2, Name = "Job B Local Json File" , Description = "This is job b."},
-                new Job { Id = 3, Name = "Job C Local Json File" , Description = "This is job c."},
-                new Job { Id = 4, Name = "Job D Local Json File" , Description = "This is job d."}
+            var jobs = new List<Job>() {
+                new Job { Id = 1, Name = "Job A API" , Description = "This is job a."},
+                new Job { Id = 2, Name = "Job B API" , Description = "This is job b."},
+                new Job { Id = 3, Name = "Job C API" , Description = "This is job c."},
+                new Job { Id = 4, Name = "Job D API" , Description = "This is job d."}
 
-            };*/
+            };
 
             Jobs.AddRange(jobs);
         }

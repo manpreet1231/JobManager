@@ -1,14 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "TqZ0Ss80tzoQ2vGifYjAbMwr0mI3dfnyepKOmNZNLaY+RGgd6g9tJZkylIikUWMikaBr9pojhx0BNUqcLrChQw==",
+  "dgSpecHash": "kuiMANMloq4uxAgMcd3bDpblC2Lw+mfWdFx8ocr7TLi1UjgYthbO7tgVbqUl3jl9I1Nchd6eOp6sLhyQREaFOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\AzharIIS\\Documents\\GitHub\\JobManager\\JobManager\\JobManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AzharIIS\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.abstractions\\1.1.0\\microsoft.azure.functions.worker.extensions.abstractions.1.1.0.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.storage.blobs\\5.0.0\\microsoft.azure.functions.worker.extensions.storage.blobs.5.0.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\refractored.mvvmhelpers\\1.6.2\\refractored.mvvmhelpers.1.6.2.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\AzharIIS\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\wintellect.azure.storage\\1.6.0.1\\wintellect.azure.storage.1.6.0.1.nupkg.sha512",
     "C:\\Users\\AzharIIS\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.0\\xamarin.communitytoolkit.2.0.0.nupkg.sha512",
@@ -21,10 +27,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Wintellect.Azure.Storage 1.6.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'Wintellect.Azure.Storage 1.6.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Wintellect.Azure.Storage",
       "targetGraphs": [
-        ".NETStandard,Version=v2.1"
+        ".NETStandard,Version=v2.0"
       ]
     }
   ]
