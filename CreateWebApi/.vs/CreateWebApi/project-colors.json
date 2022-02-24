@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a6f78935-441b-41e7-bcd3-755f236c11ec": {
+      "ProjectGuid": "a6f78935-441b-41e7-bcd3-755f236c11ec",
+      "DisplayName": "JobManager.API",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
