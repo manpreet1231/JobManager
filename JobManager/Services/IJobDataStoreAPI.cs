@@ -20,9 +20,12 @@ namespace JobManager.Services
             throw new NotImplementedException();
         }
 
-        public Task<Job> GetJob(int jobId)
+        public async Task<Job> GetJob(int jobId)
         {
-            throw new NotImplementedException();
+            var service = DependencyService.Get<IWebClientService>();
+            var jsonString = await service.GetString($"http://localhost:3074/Jobs/{jobId}/");
+            var jobs = JsonConvert.DeserializeObject<Job>(jsonString);
+            return jobs;
         }
 
         public async Task<IEnumerable<Job>> GetJobs()
