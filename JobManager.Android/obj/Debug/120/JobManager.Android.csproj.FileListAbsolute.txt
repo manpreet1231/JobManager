@@ -630,7 +630,9 @@ C:\Users\AzharIIS\source\JobManager\JobManager.Android\obj\Debug\120\stamp\_Conv
 C:\Users\AzharIIS\source\JobManager\JobManager.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Users\AzharIIS\source\JobManager\JobManager.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\AzharIIS\source\JobManager\JobManager.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\com\companyname\jobmanager\R.java
+C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\MonoAndroid,Version=v12.0.AssemblyAttributes.cs
+C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\build.props
+C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\adb.props
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\JobManager.Android.dll
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\JobManager.Android.pdb
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\com.companyname.jobmanager.apk
@@ -640,9 +642,6 @@ C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\com.c
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\com.companyname.jobmanager-Signed.apk.idsig
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\JobManager.dll
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\bin\Debug\JobManager.pdb
-C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\MonoAndroid,Version=v12.0.AssemblyAttributes.cs
-C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\build.props
-C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\adb.props
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\JobManager.Android.csproj.AssemblyReference.cache
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\res.flag
@@ -1263,6 +1262,7 @@ C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\a
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\xamarin\essentials\fileProvider.java
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\bin\packaged_resources
+C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\src\com\companyname\jobmanager\R.java
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\compressed_assemblies.arm64-v8a.s
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\compressed_assemblies.armeabi-v7a.s
 C:\Users\AzharIIS\Documents\GitHub\JobManager\JobManager.Android\obj\Debug\120\android\compressed_assemblies.x86.s
