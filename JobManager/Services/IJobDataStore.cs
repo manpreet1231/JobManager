@@ -1,7 +1,5 @@
 ﻿using JobManager.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace JobManager.Services
@@ -12,6 +10,5 @@ namespace JobManager.Services
         Task<Job> GetJob(int jobId);
         Task AddJob(Job job);
         Task UpdateJob(Job job);
-        Task DeleteJob(Job job);
     }
 }

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32002.185
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.Android", "JobManager.Android\JobManager.Android.csproj", "{73CA3860-DF27-4B04-954C-283924C8E9C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.Android", "JobManager.Android\JobManager.Android.csproj", "{92482CAA-FDF6-4252-897B-5A0CC3D04E32}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobManager", "JobManager\JobManager.csproj", "{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobManager", "JobManager\JobManager.csproj", "{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.API", "JobManager.API\JobManager.API.csproj", "{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager.API", "JobManager.API\JobManager.API.csproj", "{FB250E2E-5D2B-47C3-9412-01F5E7117D9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,27 +15,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{73CA3860-DF27-4B04-954C-283924C8E9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73CA3860-DF27-4B04-954C-283924C8E9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73CA3860-DF27-4B04-954C-283924C8E9C1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{73CA3860-DF27-4B04-954C-283924C8E9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73CA3860-DF27-4B04-954C-283924C8E9C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73CA3860-DF27-4B04-954C-283924C8E9C1}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0779F13-B12D-46AB-9482-D2CC61DEDCA2}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEB59FA0-5D1F-42D1-BD7B-3717BE5ECF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92482CAA-FDF6-4252-897B-5A0CC3D04E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92482CAA-FDF6-4252-897B-5A0CC3D04E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92482CAA-FDF6-4252-897B-5A0CC3D04E32}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92482CAA-FDF6-4252-897B-5A0CC3D04E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92482CAA-FDF6-4252-897B-5A0CC3D04E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92482CAA-FDF6-4252-897B-5A0CC3D04E32}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD855DF9-F77B-43A3-AC5D-6E640328F1A7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FB250E2E-5D2B-47C3-9412-01F5E7117D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB250E2E-5D2B-47C3-9412-01F5E7117D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB250E2E-5D2B-47C3-9412-01F5E7117D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB250E2E-5D2B-47C3-9412-01F5E7117D9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C51A6307-22CB-4CBD-A133-3308AC3959C5}
+		SolutionGuid = {A3D2F956-CAB8-4D2A-B9A0-13A85A9AB33F}
 	EndGlobalSection
 EndGlobal

@@ -9,39 +9,51 @@ using Xamarin.Forms;
 
 namespace JobManager.ViewModels
 {
-    class JobListViewModel: JobManagerBase
+    class JobListViewModel : JobManagerBase
     {
+
         public ObservableRangeCollection<Job> Jobs { get; set; }
         public AsyncCommand RefreshCommand { get; }
         public AsyncCommand<Job> SelectedCommand { get; }
+        public AsyncCommand AddCommand { get; }
 
         private Job selectedJob;
-        public Job SelectedJob 
+
+        public Job SelectedJob
         {
             get => selectedJob;
             set => SetProperty(ref selectedJob, value);
         }
+
         public JobListViewModel()
         {
             Title = "Jobs";
+
             Jobs = new ObservableRangeCollection<Job>();
 
             LoadJobs();
 
             RefreshCommand = new AsyncCommand(Refresh);
             SelectedCommand = new AsyncCommand<Job>(Selected);
+            AddCommand = new AsyncCommand(Add);
         }
 
-        private async Task Selected(Job job)
+        async Task Add()
         {
-            var rout = $"{nameof(Views.JobDetailPage)}?JobId={job.Id}";
-            await Shell.Current.GoToAsync(rout);
-            // not implimented
+            string route = $"{nameof(Views.JobDetailPage)}";
+            await Shell.Current.GoToAsync(route);
         }
 
-        public async Task Refresh()
+        async Task Selected(Job job)
+        {
+            string route = $"{nameof(Views.JobDetailPage)}?JobId={job.Id}";
+            await Shell.Current.GoToAsync(route);
+        }
+
+        private async Task Refresh()
         {
             IsBusy = true;
+
             Jobs.Clear();
             LoadJobs();
 
@@ -50,17 +62,7 @@ namespace JobManager.ViewModels
 
         public async void LoadJobs()
         {
-            //IEnumerable<Job> jobs = await JobDataStore.GetJobs();
-            //Jobs.AddRange(jobs);
-
-            var jobs = new List<Job>() {
-                new Job { Id = 1, Name = "Job A API" , Description = "This is job a."},
-                new Job { Id = 2, Name = "Job B API" , Description = "This is job b."},
-                new Job { Id = 3, Name = "Job C API" , Description = "This is job c."},
-                new Job { Id = 4, Name = "Job D API" , Description = "This is job d."}
-
-            };
-
+            IEnumerable<Job> jobs = await JobDataStore.GetJobs();
             Jobs.AddRange(jobs);
         }
     }

@@ -1,4 +1,5 @@
 ﻿using JobManager.Services;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,12 +7,15 @@ namespace JobManager
 {
     public partial class App : Application
     {
+
         public App()
         {
             InitializeComponent();
+
             //DependencyService.Register<JobDataStoreLocalJson>();
-            DependencyService.Register<JobDataStoreBlobStorageJson>();
-            //DependencyService.Register<IWebClientService>();
+            //DependencyService.Register<JobDataStoreBlobStorageJson>();
+            DependencyService.Register<JobDataStoreAPI>();
+
             MainPage = new AppShell();
         }
 
@@ -26,9 +30,5 @@ namespace JobManager
         protected override void OnResume()
         {
         }
-    }
-
-    internal class JobDataStoreLocalJson
-    {
     }
 }

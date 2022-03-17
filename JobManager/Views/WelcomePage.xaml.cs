@@ -1,5 +1,4 @@
-﻿using JobManager.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +15,6 @@ namespace JobManager.Views
         public WelcomePage()
         {
             InitializeComponent();
-        }
-        private async void OnAccessApiClicked(Object sender, EventArgs e) {
-            var service = DependencyService.Get<IWebClientService>();
-            var content = await service.GetString("https://www.google.com/");
         }
     }
 }

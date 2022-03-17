@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:JobManager.Views"
+             xmlns:viewmodels="clr-namespace:JobManager.ViewModels"
              x:Class="JobManager.Views.WelcomePage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:WelcomeViewModel />
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Job Manager!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button Text="Test API" Clicked="OnAccessApiClicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

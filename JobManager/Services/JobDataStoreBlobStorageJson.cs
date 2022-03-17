@@ -1,6 +1,9 @@
-﻿using JobManager.Models;
+﻿using Azure.Storage.Blobs;
+using JobManager.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,31 +11,104 @@ namespace JobManager.Services
 {
     class JobDataStoreBlobStorageJson : IJobDataStore<Job>
     {
-        //private readonly BlobServiceClient service = new BlobServiceClient(ConnectionString);
-        private static string ConnectionString = "";
-        public Task AddJob(Job job)
+
+        //Related Documentation:
+        //https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-dotnet
+        //https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-xamarin
+        //https://docs.microsoft.com/en-us/visualstudio/data-tools/how-to-save-and-edit-connection-strings?view=vs-2019
+
+        private readonly BlobServiceClient service = new BlobServiceClient(ConnectionString);
+
+        private static string ConnectionString => "DefaultEndpointsProtocol=https;AccountName=abourbihjobmanager;AccountKey=/McaX8bxkMrN/NSNgazwXLopvuSPXlVSXgN/pcG6g9mT8dG/wjM1lMJkWXUVRPiPbRK1ExVRclyJ+AStdSeZZg==;EndpointSuffix=core.windows.net";
+        private static string Container => "data";
+        private static string FileName => "Jobs.json";
+
+        public async Task WriteFile(List<Job> jobs)
         {
-            throw new NotImplementedException();
+            var jsonString = JsonConvert.SerializeObject(jobs);
+
+            var stream = new MemoryStream();
+
+            var writer = new StreamWriter(stream);
+            writer.Write(jsonString);
+            writer.Flush();
+
+            stream.Position = 0;
+
+            BlobClient blob = service.GetBlobContainerClient(Container).GetBlobClient(FileName);
+
+            await blob.UploadAsync(stream);
+        }
+        public async Task<List<Job>> ReadFile()
+        {
+            BlobClient blob = service.GetBlobContainerClient(Container).GetBlobClient(FileName);
+
+            if (blob.Exists())
+            {
+                var stream = new MemoryStream();
+                await blob.DownloadToAsync(stream);
+
+                stream.Position = 0;
+
+                var jsonString = new StreamReader(stream).ReadToEnd();
+
+                var jobs = JsonConvert.DeserializeObject<List<Job>>(jsonString);
+
+                return jobs;
+
+            }
+            else
+            {
+                var defaultJobs = GetDefaultJobs();
+
+                await WriteFile(defaultJobs);
+
+                return defaultJobs;
+            }
+        }
+        private List<Job> GetDefaultJobs()
+        {
+            var jobs = new List<Job>()
+            {
+                new Job { Id = 1, Name = "Job A Azure Blob File", Description = "This is job a." },
+                new Job { Id = 2, Name = "Job B Azure Blob File", Description = "This is job b." },
+                new Job { Id = 3, Name = "Job C Azure Blob File", Description = "This is job c." },
+                new Job { Id = 4, Name = "Job D Azure Blob File", Description = "This is job d." }
+            };
+
+            return jobs;
         }
 
-        public Task DeleteJob(Job job)
+        public async Task AddJob(Job job)
         {
-            throw new NotImplementedException();
+            var jobs = await ReadFile();
+            jobs.Add(job);
+
+            await WriteFile(jobs);
         }
 
-        public Task<Job> GetJob(int jobId)
+        public async Task<Job> GetJob(int jobId)
         {
-            throw new NotImplementedException();
+            var jobs = await ReadFile();
+
+            var job = jobs.Find(p => p.Id == jobId);
+
+            return job;
         }
 
-        public Task<IEnumerable<Job>> GetJobs()
+        public async Task<IEnumerable<Job>> GetJobs()
         {
-            throw new NotImplementedException();
+            var jobs = await ReadFile();
+
+            return jobs;
         }
 
-        public Task UpdateJob(Job job)
+        public async Task UpdateJob(Job job)
         {
-            throw new NotImplementedException();
+            var jobs = await ReadFile ();
+            jobs[jobs.FindIndex(p => p.Id == job.Id)] = job;
+
+            await WriteFile (jobs);
         }
     }
 }
