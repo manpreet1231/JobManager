@@ -1,16 +1,11 @@
 ﻿using Azure.Storage.Blobs;
-using JobManager.Models;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace JobManager.Services
 {
     class BlobStorageServiceAzure : IBlobStorageService
     {
-
         private readonly BlobServiceClient service = new BlobServiceClient(ConnectionString);
 
         private static string ConnectionString => "connectionstring";

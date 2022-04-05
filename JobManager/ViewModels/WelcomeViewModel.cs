@@ -1,5 +1,4 @@
-﻿
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using JobManager.Services;
 using Xamarin.Forms;
 using MvvmHelpers.Commands;
