@@ -1,5 +1,4 @@
-﻿
-namespace JobManager.Models
+﻿namespace JobManager.Models
 {
     public enum DeviceOrientation
     {

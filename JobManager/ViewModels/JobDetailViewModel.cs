@@ -12,7 +12,6 @@ namespace JobManager.ViewModels
     [QueryProperty(nameof(JobId), nameof(JobId))]
     public class JobDetailViewModel : JobManagerBase
     {
-
         public AsyncCommand SaveCommand { get; }
         public AsyncCommand TakePictureCommand { get; }
 
@@ -64,7 +63,7 @@ namespace JobManager.ViewModels
             var bytes = await service.CapturePhotoAsync();
 
             Picture = ImageSource.FromStream(() => new MemoryStream(bytes));
-
+            
             string name = $"Jobs/Pictures/{JobId}/{Guid.NewGuid()}.png";
 
             var blob = DependencyService.Get<IBlobStorageService>();
