@@ -1,7 +1,10 @@
 ﻿using MvvmHelpers.Commands;
 using JobManager.Models;
 using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using Xamarin.Forms;
 using System.Diagnostics;
 using JobManager.Services;
@@ -12,6 +15,7 @@ namespace JobManager.ViewModels
     [QueryProperty(nameof(JobId), nameof(JobId))]
     public class JobDetailViewModel : JobManagerBase
     {
+
         public AsyncCommand SaveCommand { get; }
         public AsyncCommand TakePictureCommand { get; }
 

@@ -1,4 +1,8 @@
-﻿using MvvmHelpers;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using MvvmHelpers;
+using System.Threading.Tasks;
 using JobManager.Services;
 using Xamarin.Forms;
 using JobManager.Models;

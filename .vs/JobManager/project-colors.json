@@ -35,7 +35,12 @@
       "ProjectGuid": "dd855df9-f77b-43a3-ac5d-6e640328f1a7",
       "DisplayName": "JobManager",
       "ColorIndex": 5
+    },
+    "fb250e2e-5d2b-47c3-9412-01f5e7117d9b": {
+      "ProjectGuid": "fb250e2e-5d2b-47c3-9412-01f5e7117d9b",
+      "DisplayName": "JobManager.API",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

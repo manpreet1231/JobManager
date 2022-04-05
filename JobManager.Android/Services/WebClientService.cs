@@ -1,15 +1,21 @@
-﻿using System.Net.Http;
+﻿    using System.IO;
+    using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using JobManager.Droid.Services;
-using JobManager.Services;
-using Xamarin.Forms;
+    using Android.Content;
+    using JobManager.Droid.Services;
+    using JobManager.Services;
+    using Xamarin.Forms;
 
 [assembly: Dependency(typeof(WebClientService))]
 namespace JobManager.Droid.Services
 {
     public class WebClientService : IWebClientService
     {
+
+        //Related Documentation:
+        //https://docs.microsoft.com/en-us/xamarin/xamarin-forms/data-cloud/web-services/rest
+
         public async Task<string> GetAsync(string uri)
         {
             try
