@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Web;
 using Xamarin.Forms;
 using System.Diagnostics;
+using JobManager.Services;
+using System.IO;
 
 namespace JobManager.ViewModels
 {
@@ -15,10 +17,12 @@ namespace JobManager.ViewModels
     {
 
         public AsyncCommand SaveCommand { get; }
+        public AsyncCommand TakePictureCommand { get; }
 
         private int jobId;
         private string name;
         private string description;
+        private ImageSource picture;
 
         public string Name
         {
@@ -30,6 +34,12 @@ namespace JobManager.ViewModels
         {
             get => description;
             set => SetProperty(ref description, value);
+        }
+
+        public ImageSource Picture
+        {
+            get => picture;
+            set => SetProperty(ref picture, value);
         }
 
         public int JobId
@@ -48,6 +58,15 @@ namespace JobManager.ViewModels
         public JobDetailViewModel()
         {
             SaveCommand = new AsyncCommand(Save);
+            TakePictureCommand = new AsyncCommand(TakePicture);
+        }
+
+        async Task TakePicture()
+        {
+            var service = DependencyService.Get<IMediaService>();
+            var bytes = await service.CapturePhotoAsync();
+
+            Picture = ImageSource.FromStream(() => new MemoryStream(bytes));
         }
 
         async Task Save()
@@ -55,11 +74,14 @@ namespace JobManager.ViewModels
             Job job = new Job
             {
                 Id = jobId,
-                Name = Name,
-                Description = Description
+                Name = name,
+                Description = description
             };
 
-            await JobDataStore.UpdateJob(job);
+            if (jobId != 0)
+                await JobDataStore.UpdateJobAsync(job);
+            else
+                await JobDataStore.AddJobAsync(job);
 
             await Shell.Current.GoToAsync("..");
         }
@@ -68,7 +90,7 @@ namespace JobManager.ViewModels
         {
             try
             {
-                Job job = await JobDataStore.GetJob(jobId);
+                Job job = await JobDataStore.GetJobAsync(jobId);
                 //JobId = job.Id;
                 Name = job.Name;
                 Description = job.Description;
